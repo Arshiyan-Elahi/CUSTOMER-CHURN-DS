@@ -1,17 +1,104 @@
-<h1 align="center">Hi 👋, I'm Arshiyan Elahi</h1>
-<h3 align="center">I am a passionate Computer Engineering student at Sir Syed University, driven by a deep curiosity for technology and its endless possibilities. With a strong foundation in both hardware and software, I'm on a mission to harness the power of innovation and problem-solving in the world of computing.</h3>
+# Customer Churn Prediction Project
 
-<p align="left"> <img src="https://komarev.com/ghpvc/?username=arshiyan-elahi&label=Profile%20views&color=0e75b6&style=flat" alt="arshiyan-elahi" /> </p>
+## Overview
 
-- 🔭 I’m currently working on **Upwork & Fiverr**
+This project focuses on predicting customer churn using a telecom dataset of over 7,000 customer records. The objective is to identify customers who are likely to leave the service so that businesses can take preventive action.
 
-- 📫 How to reach me **arshiyanelahi84@gmail.com**
+Customer churn prediction is important because retaining existing customers is more cost-effective than acquiring new ones.
 
-<h3 align="left">Connect with me:</h3>
-<p align="left">
-</p>
 
-<h3 align="left">Languages and Tools:</h3>
-<p align="left"> <a href="https://www.arduino.cc/" target="_blank" rel="noreferrer"> <img src="https://cdn.worldvectorlogo.com/logos/arduino-1.svg" alt="arduino" width="40" height="40"/> </a> <a href="https://www.cprogramming.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg" alt="c" width="40" height="40"/> </a> <a href="https://www.java.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="java" width="40" height="40"/> </a> <a href="https://www.mysql.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="mysql" width="40" height="40"/> </a> <a href="https://opencv.org/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/opencv/opencv-icon.svg" alt="opencv" width="40" height="40"/> </a> <a href="https://www.python.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40"/> </a> <a href="https://www.tensorflow.org" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/tensorflow/tensorflow-icon.svg" alt="tensorflow" width="40" height="40"/> </a> </p>
+## Dataset
 
-<p><img align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=arshiyan-elahi&show_icons=true&locale=en&layout=compact" alt="arshiyan-elahi" /></p>
+The dataset used is the Telco Customer Churn dataset, which contains:
+
+* Customer tenure
+* Monthly charges
+* Total charges
+* Contract type
+* Internet service
+* Payment method
+* Churn label (Target Variable)
+
+Target Variable:
+
+* 0 = Customer Stayed
+* 1 = Customer Churned
+
+
+## Project Workflow
+
+### 1. Data Cleaning
+
+* Removed irrelevant columns (customerID)
+* Converted TotalCharges to numeric
+* Handled missing values
+
+### 2. Exploratory Data Analysis (EDA)
+
+Performed visualization to understand:
+
+* Churn distribution (class imbalance)
+* Tenure vs churn relationship
+* Monthly charges impact on churn
+* Feature correlations
+
+### 3. Feature Engineering
+
+* Created a new feature: AvgChargePerMonth
+  This helps capture customer spending behavior more effectively.
+
+### 4. Handling Class Imbalance
+
+* Applied SMOTE (Synthetic Minority Oversampling Technique)
+  This balanced the minority churn class.
+
+### 5. Model Training
+
+* Trained an XGBoost classifier
+* Compared performance using classification metrics
+
+### 6. Model Evaluation
+
+Evaluation metrics used:
+
+* Precision
+* Recall
+* F1-Score
+* ROC-AUC Score
+
+Final AUC Score: ~0.85–0.89
+
+
+## Key Insights
+
+* Customers with shorter tenure are more likely to churn
+* Higher monthly charges increase churn probability
+* Contract type plays a significant role
+
+## Technologies Used
+
+* Python
+* Pandas
+* NumPy
+* Seaborn & Matplotlib
+* Scikit-learn
+* XGBoost
+* SMOTE (Imbalanced-Learn)
+
+## Conclusion
+
+This project demonstrates a complete end-to-end machine learning pipeline including:
+
+* Data preprocessing
+* Feature engineering
+* Handling class imbalance
+* Model training
+* Performance evaluation
+
+The solution can help telecom companies proactively identify at-risk customers and improve retention strategies.
+
+
+## Author
+
+Arshiyan Elahi
+Computer Engineering | AI & Data Science
